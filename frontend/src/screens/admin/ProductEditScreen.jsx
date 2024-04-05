@@ -156,7 +156,7 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group controlId="category" className="my-2">
-              <Form.Label>Count In Stock</Form.Label>
+              <Form.Label>Category</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter category"
