@@ -44,7 +44,7 @@ const ProductScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  const addtToCartHandler = () => {
+  const addToCartHandler = () => {
     dispatch(addToCart({ ...product, qty }));
     navigate("/cart");
   };
@@ -149,7 +149,7 @@ const ProductScreen = () => {
                       className="btn-block"
                       type="button"
                       disabled={product.countInStock === 0}
-                      onClick={addtToCartHandler}
+                      onClick={addToCartHandler}
                     >
                       Add To Cart
                     </Button>
