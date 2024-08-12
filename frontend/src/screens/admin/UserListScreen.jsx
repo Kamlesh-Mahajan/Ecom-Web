@@ -12,6 +12,9 @@ import {
 const UserListScreen = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
 
+  console.log("Fetched users:", users); // Check the output here
+  console.log("Error:", error); // Log any error for debugging
+
   const [deleteUser, { isLoading: loadingDelete }] = useDeleteUserMutation();
 
   const deleteHandler = async (id) => {
@@ -25,6 +28,7 @@ const UserListScreen = () => {
       }
     }
   };
+
   return (
     <>
       <h1>Users</h1>
@@ -32,7 +36,9 @@ const UserListScreen = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Message variant="danger">{error}</Message>
+        <Message variant="danger">
+          {error.message || "Error fetching users"}
+        </Message>
       ) : (
         <Table striped hover responsive className="table-sm">
           <thead>
