@@ -39,7 +39,7 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="ms-auto mt-1">
               <SearchBox />
               <LinkContainer to="/cart">
                 <Nav.Link>
@@ -89,7 +89,7 @@ const Header = () => {
 };
 
 const logoStyle = {
-  fontSize: "2vw",
+  fontSize: "2vw"
 };
 
 export default Header;
